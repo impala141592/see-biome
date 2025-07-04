@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
+import { GlobalStyles } from "./theme/globalStyles";
 
 const Container = styled.div`
 	padding: 2rem;
@@ -73,6 +74,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+			<GlobalStyles />
 			<Container>
 				<nav>
 					<Link to='/'>Home</Link>
