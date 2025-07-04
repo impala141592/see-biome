@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
@@ -47,6 +47,30 @@ const InputDemo = () => <h2>Input Preview</h2>;
 function App() {
 	const [isDark, setIsDark] = useState(false);
 
+	// On mount: check localStorage or system preference
+	useEffect(() => {
+		const savedTheme = localStorage.getItem("biome-theme");
+		if (savedTheme === "dark") {
+			setIsDark(true);
+		} else if (savedTheme === "light") {
+			setIsDark(false);
+		} else {
+			const prefersDark = window.matchMedia(
+				"(prefers-color-scheme: dark)"
+			).matches;
+			setIsDark(prefersDark);
+		}
+	}, []);
+
+	// Save to localStorage when user toggles
+	const toggleTheme = () => {
+		setIsDark((prev) => {
+			const newVal = !prev;
+			localStorage.setItem("biome-theme", newVal ? "dark" : "light");
+			return newVal;
+		});
+	};
+
 	return (
 		<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
 			<Container>
@@ -56,7 +80,7 @@ function App() {
 					<Link to='/input'>Input</Link>
 				</nav>
 
-				<button onClick={() => setIsDark((prev) => !prev)}>
+				<button onClick={toggleTheme}>
 					Toggle {isDark ? "Light" : "Dark"} Mode
 				</button>
 
