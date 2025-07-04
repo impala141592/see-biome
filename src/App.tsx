@@ -4,6 +4,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "./theme/globalStyles";
 
+import TopBar from "./components/common/TopBar/TopBar";
+
 const Container = styled.div`
 	padding: 2rem;
 	font-family: sans-serif;
@@ -75,6 +77,8 @@ function App() {
 	return (
 		<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
 			<GlobalStyles />
+			<TopBar isDark={isDark} toggleDarkMode={toggleTheme} />
+
 			<Container>
 				<nav>
 					<Link to='/'>Home</Link>
