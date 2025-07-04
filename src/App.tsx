@@ -1,3 +1,4 @@
+import { Routes, Route, Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 
 const Container = styled.div`
@@ -11,12 +12,24 @@ const theme = {
 	},
 };
 
+const Home = () => <h2>Welcome to Biome</h2>;
+const ButtonDemo = () => <h2>Button Preview</h2>;
+const InputDemo = () => <h2>Input Preview</h2>;
+
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Container>
-				<h1>Biome Preview</h1>
-				{/* Imported components will go here */}
+				<nav>
+					<Link to='/'>Home</Link> | <Link to='/button'>Button</Link> |
+					<Link to='/input'>Input</Link>
+				</nav>
+
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/button' element={<ButtonDemo />} />
+					<Route path='/input' element={<InputDemo />} />
+				</Routes>
 			</Container>
 		</ThemeProvider>
 	);
