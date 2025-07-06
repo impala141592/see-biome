@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsNoiseReduction } from "react-icons/bs";
 
 import {
 	TopBarContainer,
@@ -28,7 +29,7 @@ const TopBar: React.FC<TopBarProps> = ({ isDark, toggleDarkMode }) => {
 					aria-label='Toggle dark mode'
 					$isDark={isDark}
 				>
-					Toggle
+					<BsNoiseReduction />
 				</ToggleButton>
 			</TopBarActions>
 		</TopBarContainer>

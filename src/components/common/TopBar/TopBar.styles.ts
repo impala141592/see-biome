@@ -55,12 +55,7 @@ export const TopBarActions = styled.div`
 
 export const ToggleButton = styled.button<{ $isDark: boolean }>`
 	background: none;
-	border: 1px solid ${({ theme }) => theme.colors.neutral.base};
-	border-radius: 9999px;
-	width: 3rem;
-	height: 1.5rem;
 	cursor: pointer;
-	position: relative;
 	padding: 0;
 	outline: none;
 `;

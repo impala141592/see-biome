@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "./theme/globalStyles";
