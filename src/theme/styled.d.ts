@@ -1,3 +1,5 @@
+// src/styles/theme/styled.d.ts
+
 import "styled-components";
 
 declare module "styled-components" {
@@ -5,7 +7,17 @@ declare module "styled-components" {
 		colors: {
 			background: string;
 			text: string;
-			primary: string;
+			overlay: string;
+			primary: {
+				light: string;
+				base: string;
+				dark: string;
+			};
+			neutral: {
+				light: string;
+				base: string;
+				dark: string;
+			};
 		};
 	}
 }

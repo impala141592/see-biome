@@ -12,10 +12,13 @@ ${reset}
     --space-md: 1rem;
     --space-lg: 2rem;
 
-    /* light theme */
-    --color-primary: ${({ theme }) => theme.colors.primary};
-    --color-bg: ${({ theme }) => theme.colors.background};
-    --color-text: ${({ theme }) => theme.colors.text};
+
+    /* elements */
+    --top-bar-height: 3rem;
+  }
+
+  * {
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   body {

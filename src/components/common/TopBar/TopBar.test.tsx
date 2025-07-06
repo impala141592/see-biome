@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import TopBar from "./TopBar";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "../../../theme/light"; // adjust this import to match your actual path
+import { lightTheme } from "../../../theme/light";
 
 describe("TopBar", () => {
 	const renderWithTheme = (ui: React.ReactElement) =>
