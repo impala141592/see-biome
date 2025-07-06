@@ -7,9 +7,7 @@ import { AppContainer, Container } from "./App.styles";
 
 import TopBar from "./components/common/TopBar/TopBar";
 
-const Home = () => <h2>Welcome to Biome</h2>;
-const ButtonDemo = () => <h2>Button Preview</h2>;
-const InputDemo = () => <h2>Input Preview</h2>;
+import Home from "./routes/Home/Home";
 
 function App() {
 	const [isDark, setIsDark] = useState(false);
@@ -46,8 +44,6 @@ function App() {
 				<Container>
 					<Routes>
 						<Route path='/' element={<Home />} />
-						<Route path='/button' element={<ButtonDemo />} />
-						<Route path='/input' element={<InputDemo />} />
 					</Routes>
 				</Container>
 			</AppContainer>

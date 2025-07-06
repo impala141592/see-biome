@@ -19,5 +19,15 @@ declare module "styled-components" {
 				dark: string;
 			};
 		};
+		layout: {
+			contentMaxWidth: string;
+			padding: string;
+			breakpoints: {
+				sm: string;
+				md: string;
+				lg: string;
+				xl: string;
+			};
+		};
 	}
 }

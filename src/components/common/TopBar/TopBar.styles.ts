@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const TopBarContainer = styled.header`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.5rem 2rem;
-	height: var(--top-bar-height);
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
+	max-width: 100vw;
+	padding: 0.5rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--top-bar-height);
 	z-index: 1000;
 	color: ${({ theme }) => theme.colors.text};
 
@@ -23,6 +24,10 @@ export const TopBarContainer = styled.header`
 		z-index: -1;
 		background: ${({ theme }) => theme.colors.overlay};
 		backdrop-filter: blur(4px);
+	}
+
+	@media (max-width: 768px) {
+		padding: 0.5rem 1rem;
 	}
 `;
 

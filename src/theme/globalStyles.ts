@@ -28,4 +28,12 @@ ${reset}
     color: var(--color-text);
     transition: background-color 0.7s ease, color 0.5s ease;
   }
+
+  section {
+    margin-bottom: 4rem;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;  
+  }
 `;
