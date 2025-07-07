@@ -24,9 +24,6 @@ ${reset}
   body {
     margin: 0;
     font-family: var(--font-sans);
-    background: var(--color-bg);
-    color: var(--color-text);
-    transition: background-color 0.7s ease, color 0.5s ease;
   }
 
   section {

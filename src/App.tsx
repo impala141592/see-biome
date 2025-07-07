@@ -3,11 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "./theme/globalStyles";
-import { AppContainer, Container } from "./App.styles";
+import { AppContainer } from "./App.styles";
 
 import TopBar from "./components/common/TopBar/TopBar";
 
 import Home from "./routes/Home/Home";
+import Components from "./routes/Components/Components";
 
 function App() {
 	const [isDark, setIsDark] = useState(false);
@@ -41,11 +42,10 @@ function App() {
 			<GlobalStyles />
 			<AppContainer>
 				<TopBar isDark={isDark} toggleDarkMode={toggleTheme} />
-				<Container>
-					<Routes>
-						<Route path='/' element={<Home />} />
-					</Routes>
-				</Container>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/components' element={<Components />} />
+				</Routes>
 			</AppContainer>
 		</ThemeProvider>
 	);

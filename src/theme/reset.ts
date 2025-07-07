@@ -12,7 +12,6 @@ export const reset = css`
 
 	html,
 	body {
-		height: 100%;
 		font-family: var(--font-sans, sans-serif);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
