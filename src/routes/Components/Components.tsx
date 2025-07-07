@@ -6,10 +6,29 @@ import {
 	Caption,
 	Title,
 	Search,
-	ComponentGrid,
 } from "./Components.styles";
 
 import { FullWidthMain } from "../../components/layout/MainContainer/MainContainer";
+import { ComponentMosaic } from "../../components/common/ComponentMosaic/ComponentMosaic";
+
+const allComponents = [
+	"Button",
+	"Input",
+	"Switch",
+	"Checkbox",
+	"Tooltip",
+	"Card",
+	"Modal",
+	"Tag",
+	"Alert",
+	"Badge",
+	"Avatar",
+	"Dropdown",
+	"ProgressBar",
+	"Spinner",
+	"Tabs",
+	"Toast",
+];
 
 const Components = () => {
 	return (
@@ -24,7 +43,7 @@ const Components = () => {
 						</div>
 						<Search type='text' placeholder='Search components…' />
 					</PageHeader>
-					<ComponentGrid>{/* placeholder tiles for now */}</ComponentGrid>
+					<ComponentMosaic components={allComponents} />
 				</PageContent>
 			</PageLayout>
 		</FullWidthMain>

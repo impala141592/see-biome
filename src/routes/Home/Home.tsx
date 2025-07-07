@@ -1,8 +1,22 @@
 import React from "react";
 import { Caption, Heading, Description, ComponentsButton } from "./Home.styles";
 
-import { ComponentMosaic } from "../../components/home/ComponentMosaic";
+import { ComponentMosaic } from "../../components/common/ComponentMosaic/ComponentMosaic";
 import { ConstrainedMain } from "../../components/layout/MainContainer/MainContainer";
+
+const homepageComponents = [
+	"Button",
+	"Input",
+	"Switch",
+	"Checkbox",
+	"Tooltip",
+	"Card",
+	"Modal",
+	"Tag",
+	"Alert",
+	"Badge",
+	"Avatar",
+];
 
 const Home: React.FC = () => {
 	return (
@@ -17,7 +31,7 @@ const Home: React.FC = () => {
 				</Description>
 				<ComponentsButton to='/components'>Components</ComponentsButton>
 			</section>
-			<ComponentMosaic />
+			<ComponentMosaic components={homepageComponents} showSeeMoreTile />
 		</ConstrainedMain>
 	);
 };

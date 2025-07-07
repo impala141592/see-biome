@@ -6,10 +6,9 @@ export const SidebarContainer = styled.aside`
 	top: var(--top-bar-height);
 	height: calc(100vh - var(--top-bar-height));
 	width: 200px;
-	padding: 2rem 1rem;
-	background-color: ${({ theme }) => theme.colors.background};
-	border-right: 1px solid ${({ theme }) => theme.colors.neutral.base}20;
+	padding: 2rem;
 	overflow-y: auto;
+	font-size: 0.875rem;
 
 	@media (max-width: 768px) {
 		display: none; // or later: collapse into hamburger
@@ -17,27 +16,13 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const SidebarList = styled.ul`
-	list-style: none;
-	padding: 0;
-	margin: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 1rem;
 `;
 
 export const SidebarLink = styled(NavLink)`
 	text-decoration: none;
 	color: ${({ theme }) => theme.colors.text};
-	padding: 0.25rem 0.5rem;
-	border-radius: 4px;
 	font-weight: 500;
-	transition: background-color 0.2s ease;
-
-	&.active {
-		background-color: ${({ theme }) => theme.colors.primary.base}33;
-	}
-
-	&:hover {
-		background-color: ${({ theme }) => theme.colors.primary.base}1A;
-	}
 `;

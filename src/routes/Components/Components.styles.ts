@@ -4,10 +4,10 @@ export const PageLayout = styled.div`
 	display: flex;
 `;
 
-export const PageContent = styled.main`
+export const PageContent = styled.div`
 	flex: 1;
 	padding: 2rem;
-	max-width: 1200px;
+	max-width: ${({ theme }) => theme.layout.contentMaxWidth};
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -50,10 +50,4 @@ export const Search = styled.input`
 		border-color: ${({ theme }) => theme.colors.primary.base};
 		box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.primary.base}33;
 	}
-`;
-
-export const ComponentGrid = styled.div`
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 1rem;
 `;
